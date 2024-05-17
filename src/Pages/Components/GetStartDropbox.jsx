@@ -3,7 +3,7 @@ import { IoArrowForward } from "react-icons/io5";
 
 const GetStartDropbox = () => {
   return (
-  <div className=" border py-3">
+  <div className="  py-3">
       <div className="  flex justify-between items-center w-[1200px] mx-auto">
       <p className="text-[40px] font-semibold">Get started with Dropbox</p>
       <div className="text-center   ">
