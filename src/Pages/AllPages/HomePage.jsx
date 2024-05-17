@@ -2,6 +2,7 @@ import React from 'react';
 import HomeBanner from '../Components/HomeBanner';
 import WhatDoDropbox from '../Components/WhatDoDropbox';
 import BetaProduct from '../Components/BetaProduct';
+import HowUseDropbox from '../Components/HowUseDropbox';
 
 const HomePage = () => {
     return (
@@ -9,6 +10,7 @@ const HomePage = () => {
             <HomeBanner></HomeBanner>
             <WhatDoDropbox></WhatDoDropbox>
             <BetaProduct></BetaProduct>
+            <HowUseDropbox></HowUseDropbox>
         </div>
     );
 };
