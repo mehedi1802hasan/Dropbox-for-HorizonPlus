@@ -3,6 +3,8 @@ import HomeBanner from '../Components/HomeBanner';
 import WhatDoDropbox from '../Components/WhatDoDropbox';
 import BetaProduct from '../Components/BetaProduct';
 import HowUseDropbox from '../Components/HowUseDropbox';
+import WhyChoiceUs from '../Components/WhyChoiceUs';
+import GetStartDropbox from '../Components/GetStartDropbox';
 
 const HomePage = () => {
     return (
@@ -11,6 +13,8 @@ const HomePage = () => {
             <WhatDoDropbox></WhatDoDropbox>
             <BetaProduct></BetaProduct>
             <HowUseDropbox></HowUseDropbox>
+            <WhyChoiceUs></WhyChoiceUs>
+            <GetStartDropbox></GetStartDropbox>
         </div>
     );
 };
