@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaDropbox } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
 
 const Navbar = () => {
   return (
@@ -62,8 +63,10 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
+
       <div className="mr-7 mt-1 gap-7 font-medium hidden lg:flex">
-     
+     <Link to='/'><TbWorld className="text-2xl" />
+</Link>
       <Link to='/'>Cantact sales</Link>
               <Link to='/'>Get app</Link>
               <Link to='/'>Sign up</Link>
