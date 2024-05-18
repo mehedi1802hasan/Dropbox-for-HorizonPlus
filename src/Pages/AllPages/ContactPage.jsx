@@ -1,8 +1,10 @@
 import React from 'react';
+import ContactDropbox from '../Components/ContactDropbox';
 
 const ContactPage = () => {
     return (
-        <div>ContactPage.............
+        <div className='pt-16'>
+            <ContactDropbox></ContactDropbox>
         </div>
     );
 };
