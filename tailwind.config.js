@@ -5,7 +5,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+
+      fontFamily: {
+      //  'grotesk': ['Hanken Grotesk", sans-serif'],
+        space_grotesk:['Space Grotesk', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     require('daisyui'),

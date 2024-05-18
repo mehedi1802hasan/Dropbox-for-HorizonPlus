@@ -1,10 +1,20 @@
+import { Route, Router,Routes  } from 'react-router-dom';
 import './App.css';
 import HomePage from './Pages/AllPages/HomePage';
+import AboutPage from './Pages/AllPages/AboutPage';
+import ContactPage from './Pages/AllPages/ContactPage';
 
 function App() {
   return (
    <div>
- <HomePage></HomePage>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+
+
+
    </div>
   );
 }
