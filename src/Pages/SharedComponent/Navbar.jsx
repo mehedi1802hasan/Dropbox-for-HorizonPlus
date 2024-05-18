@@ -5,7 +5,8 @@ import { TbWorld } from "react-icons/tb";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 fixed ">
+   <div className=" w-full bg-base-100 fixed border flex justify-center">
+     <div className="navbar w-[1300px] mx-auto border ">
       <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -75,6 +76,7 @@ const Navbar = () => {
         <Link className="bg-[#2f79f0] hover:bg-[#2064d3] text-white px-4 py-2 rounded-xl font-semibold">Get started</Link>
       </div>
     </div>
+   </div>
   );
 };
 
