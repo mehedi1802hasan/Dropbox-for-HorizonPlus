@@ -7,51 +7,131 @@ import aiSpottingm from "../../assets/aiSpottingm.gif";
 import AddBlogModal from "./AddBlogModal";
 import { BlogContext } from "../../NewBlogContext";
 const Blog = () => {
-  const [isAdd,setIsAdd]=useState(false);
-  const handleAddBlog=()=>{
+  const [isAdd, setIsAdd] = useState(false);
+  const handleAddBlog = () => {
     setIsAdd(true);
   };
   const { blogs } = useContext(BlogContext);
+  const [isHovering, setIsHovering] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
+  const handleMouseMove = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+  };
   return (
     <div className="text-black lg:pb-52 lg:pt-32  ">
       <div className="">
-        <div onClick={()=>handleAddBlog()} className="flex mb-12 justify-end  w-[1100px]  mx-auto ">
+        <div
+          onClick={() => handleAddBlog()}
+          className=" animate-bounce flex mb-12 justify-end  w-[1100px]  mx-auto "
+        >
           <button className="  border-2 px-8 py-3 border-black rounded-sm hover:border-red-400  hover:bg-yellow-400 font-bold hover:text-white  ">
             Add Blog
           </button>
         </div>
 
-                {/* Daynamic blogs */}
-  <div className="blog-list grid grid-cols-2 mb-24 gap-y-20 w-[1070px] mx-auto">
-            {blogs.length > 0 ? (
-                blogs.map((blog, index) => (
-                    <div key={index} className="blog-item  p-4 mb-4 rounded">
-                        <img  src={blog.image} alt={blog.name} className="w-[337px] h-[211px] mt-2" />
-                        <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[400px] text-black">
-                        {blog.title}
-            </p>
-            <p className="text-[15px] hover:underline">{blog.type}</p>
-                    </div>
-                ))
-            ) : (
-                <p></p>
-            )}
+        {/* Daynamic blogs */}
+        <div className="blog-list grid grid-cols-2 mb-24 gap-y-20 w-[1070px] mx-auto">
+          {blogs.length > 0 ? (
+            blogs.map((blog, index) => (
+              <div key={index} className="blog-item  p-4 mb-4 rounded">
+              <div style={{ position: 'relative' }} onMouseMove={handleMouseMove}>  <img
+                  src={blog.image}
+                  alt={blog.name}
+                  className="w-[337px] h-[211px] mt-2 hover:cursor-none"  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                />    {isHovering && (
+                  <div
+                  style={{
+                      position: 'fixed',
+                      left: cursorPosition.x + 10, // Adjust the offset as needed
+                      top: cursorPosition.y + 10, // Adjust the offset as needed
+                      backgroundColor: 'black', // Black background
+                      color: 'red', // White text
+                      padding: '6px 30px',  // Padding of 7px
+                      boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.3)',
+                    }}
+                  >
+                    <span className="bg-black text-white text-4xl">Read</span>
+                  </div>
+                )} </div>
+                <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[400px] text-black">
+                  {blog.title}
+                </p>
+                <p className="text-[15px] hover:underline">{blog.type}</p>
+              </div>
+            ))
+          ) : (
+            <p></p>
+          )}
         </div>
 
         <div className="  lg:flex  justify-center gap-28">
-
-                 {/* 1st static blog */}
-   <div className="mt-6">
-            <img className="w-[464px] h-[464px]" src={abdiaidid} alt="" />
+          {/* 1st static blog */}
+          <div className="mt-6">
+            <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
+              <img
+                className="w-[464px] h-[464px] hover:cursor-none"
+                src={abdiaidid}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                alt=""
+              />
+              {isHovering && (
+                <div
+                  style={{
+                    position: "fixed",
+                    left: cursorPosition.x + 10, // Adjust the offset as needed
+                    top: cursorPosition.y + 10, // Adjust the offset as needed
+                    backgroundColor: "black", // Black background
+                    color: "red", // White text
+                    padding: "6px 30px", // Padding of 7px
+                    boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  <span className="bg-black text-white text-4xl">Read</span>
+                </div>
+              )}
+            </div>
             <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[400px] text-black">
               Abdi Aidid on being your most creative, dynamic self
             </p>
             <p className="text-[15px] hover:underline">Podcast</p>
           </div>
-                   {/* 2nd static blog */}
- <div>
-            <img className="w-[506px] h-[510px]" src={Workslower} alt="" />
+          {/* 2nd static blog */}
+          <div>
+            <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
+              <img
+                className="w-[506px] h-[510px] hover:cursor-none"
+                src={Workslower}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                alt=""
+              />{" "}
+              {isHovering && (
+                <div
+                  style={{
+                    position: "fixed",
+                    left: cursorPosition.x + 10, // Adjust the offset as needed
+                    top: cursorPosition.y + 10, // Adjust the offset as needed
+                    backgroundColor: "black", // Black background
+                    color: "red", // White text
+                    padding: "6px 30px", // Padding of 7px
+                    boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  <span className="bg-black text-white text-4xl">Read</span>
+                </div>
+              )}{" "}
+            </div>
             <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[400px] text-black">
               Abdi Aidid on being your most creative, dynamic self
             </p>
@@ -61,7 +141,31 @@ const Blog = () => {
         <div className="mt-28 w-[1170px] mx-auto lg:flex  justify-between  gap-8">
           {/* 3rd static blog */}
           <div className="mt-6">
-            <img className="w-[337px] h-[211px]" src={AugXhero} alt="" />
+            <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
+           
+              <img
+                className="w-[337px] h-[211px] hover:cursor-none"
+                src={AugXhero}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                alt=""
+              />{" "}
+              {isHovering && (
+                <div
+                  style={{
+                    position: "fixed",
+                    left: cursorPosition.x + 10, // Adjust the offset as needed
+                    top: cursorPosition.y + 10, // Adjust the offset as needed
+                    backgroundColor: "black", // Black background
+                    color: "red", // White text
+                    padding: "6px 30px", // Padding of 7px
+                    boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  <span className="bg-black text-white text-4xl">Read</span>
+                </div>
+              )}{" "}
+            </div>
             <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[270px]   lg:leading-[25px] text-black">
               How Aug X Labs made video creation less of a chore, more of a game
             </p>
@@ -69,8 +173,32 @@ const Blog = () => {
           </div>
           {/*4th static blog */}
 
-          <div className="mt-">
-            <img className="w-[337px] h-[337px]" src={robo} alt="" />
+          <div className="">
+            <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
+              
+              <img
+                className="w-[337px] h-[337px] hover:cursor-none"
+                src={robo}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                alt=""
+              />{" "}
+              {isHovering && (
+                <div
+                  style={{
+                    position: "fixed",
+                    left: cursorPosition.x + 10, // Adjust the offset as needed
+                    top: cursorPosition.y + 10, // Adjust the offset as needed
+                    backgroundColor: "black", // Black background
+                    color: "red", // White text
+                    padding: "6px 30px", // Padding of 7px
+                    boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  <span className="bg-black text-white text-4xl">Read</span>
+                </div>
+              )}{" "}
+            </div>
             <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[300px] text-black">
               Will robots give us more "me" time?
             </p>
@@ -79,7 +207,31 @@ const Blog = () => {
 
           {/*5th static blog */}
           <div>
-            <img className="w-[337px] h-[337px]" src={aiSpottingm} alt="" />
+            <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
+           
+              <img
+                className="w-[337px] h-[337px] hover:cursor-none"
+                src={aiSpottingm}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                alt=""
+              />{" "}
+              {isHovering && (
+                <div
+                  style={{
+                    position: "fixed",
+                    left: cursorPosition.x + 10, // Adjust the offset as needed
+                    top: cursorPosition.y + 10, // Adjust the offset as needed
+                    backgroundColor: "black", // Black background
+                    color: "red", // White text
+                    padding: "6px 30px", // Padding of 7px
+                    boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  <span className="bg-black text-white text-4xl">Read</span>
+                </div>
+              )}{" "}
+            </div>
             <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[240px] text-black">
               How AI is spotting manatees in the wild
             </p>

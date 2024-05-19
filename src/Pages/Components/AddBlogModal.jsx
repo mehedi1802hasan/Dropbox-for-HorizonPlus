@@ -58,8 +58,8 @@ const AddBlogModal = ({ isAdd, setIsAdd }) => {
                             className="w-full h-[40px] border px-4"
                             value={blogName}
                             placeholder="enter the blog title here..."
-                            onChange={(e) => setBlogName(e.target.value)}
-                        />
+                            onChange={(e) => setBlogName(e.target.value)} 
+                     required   />
                     </div>
                     <div>
                         <h3 className="text-[13px] font-semibold mt-2 mb-[2px]">Blog Type</h3>
@@ -69,7 +69,7 @@ const AddBlogModal = ({ isAdd, setIsAdd }) => {
                             value={blogType}
                             placeholder="enter the blog type here..."
                             onChange={(e) => setBlogType(e.target.value)}
-                        />
+                            required    />
                     </div>
                     <div className="relative w-44 mx-auto mt-3 mb-6">
                         <input
@@ -84,7 +84,7 @@ const AddBlogModal = ({ isAdd, setIsAdd }) => {
                                     src={blogImage || damiImg}
                                     alt="Uploaded"
                                 />
-                                <p className="text-[9px] text-center">Please Click & upload Blog Image</p>
+                                <p className="text-[9px] text-center">Please Click & upload Blog Image(464X464 )</p>
                             </div>
                         </div>
                     </div>
