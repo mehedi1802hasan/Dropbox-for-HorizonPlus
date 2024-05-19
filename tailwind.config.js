@@ -6,15 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-
       fontFamily: {
-      //  'grotesk': ['Hanken Grotesk", sans-serif'],
-        space_grotesk:['Space Grotesk', 'sans-serif'],
+        space_grotesk: ['Space Grotesk', 'sans-serif'],
+        'familjen-grotesk': ['Familjen Grotesk', 'sans-serif'],
       },
     },
   },
   plugins: [
     require('daisyui'),
   ],
-}
-
+};
