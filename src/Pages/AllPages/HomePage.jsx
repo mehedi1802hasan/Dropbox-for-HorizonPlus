@@ -5,6 +5,7 @@ import BetaProduct from '../Components/BetaProduct';
 import HowUseDropbox from '../Components/HowUseDropbox';
 import WhyChoiceUs from '../Components/WhyChoiceUs';
 import GetStartDropbox from '../Components/GetStartDropbox';
+import HomePageStorySlider from '../Components/HomePageStorySlider';
 
 const HomePage = () => {
     return (
@@ -14,6 +15,7 @@ const HomePage = () => {
             <BetaProduct></BetaProduct>
             <HowUseDropbox></HowUseDropbox>
             <WhyChoiceUs></WhyChoiceUs>
+            <HomePageStorySlider></HomePageStorySlider>
             <GetStartDropbox></GetStartDropbox>
         </div>
     );

@@ -5,7 +5,7 @@ import { TbWorld } from "react-icons/tb";
 
 const Navbar = () => {
   return (
-   <div className=" w-full bg-base-100 fixed border flex justify-center">
+   <div className=" w-full bg-base-100 z-10 fixed border flex justify-center">
      <div className="navbar w-[1300px] mx-auto  ">
       <div className="navbar-start ">
         <div className="dropdown">
