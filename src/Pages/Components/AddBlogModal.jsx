@@ -57,6 +57,7 @@ const AddBlogModal = ({ isAdd, setIsAdd }) => {
                             type="text"
                             className="w-full h-[40px] border px-4"
                             value={blogName}
+                            placeholder="enter the blog title here..."
                             onChange={(e) => setBlogName(e.target.value)}
                         />
                     </div>
@@ -66,6 +67,7 @@ const AddBlogModal = ({ isAdd, setIsAdd }) => {
                             type="text"
                             className="w-full h-[40px] border px-4"
                             value={blogType}
+                            placeholder="enter the blog type here..."
                             onChange={(e) => setBlogType(e.target.value)}
                         />
                     </div>

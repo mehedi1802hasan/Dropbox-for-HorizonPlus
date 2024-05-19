@@ -15,8 +15,8 @@ const HomePage = () => {
             <BetaProduct></BetaProduct>
             <HowUseDropbox></HowUseDropbox>
             <WhyChoiceUs></WhyChoiceUs>
-            <HomePageStorySlider></HomePageStorySlider>
-            <GetStartDropbox></GetStartDropbox>
+           <HomePageStorySlider></HomePageStorySlider>
+            {/*  <GetStartDropbox></GetStartDropbox> */}
         </div>
     );
 };
