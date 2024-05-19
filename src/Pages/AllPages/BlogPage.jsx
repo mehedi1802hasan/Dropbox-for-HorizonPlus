@@ -3,6 +3,7 @@ import BlogPageNavbar from "../Components/BlogPageNavbar";
 import BlogPageFooter from "../Components/BlogPageFooter";
 import BlogPageBanner from "../Components/BlogPageBanner";
 import Blog from "../Components/Blog";
+import Insight from "../Components/Insight";
 
 const BlogPage = () => {
   return (
@@ -10,8 +11,9 @@ const BlogPage = () => {
       <BlogPageNavbar></BlogPageNavbar>
 
       <BlogPageBanner></BlogPageBanner>
-      <Blog></Blog>
 
+      <Blog></Blog>
+ <Insight></Insight>
       <BlogPageFooter></BlogPageFooter>
     </div>
   );

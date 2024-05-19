@@ -9,8 +9,8 @@ const BlogPageBanner = () => {
             </div>
             <div className=' w-2/3'>
           <div>
-          <p className='text-[22px] font-bold underline'>Customer Stories</p>
-           <h3 className='text-[97px] font-familjen-grotesk w-[900px] font-bold'>Remote and under control: How a K-Drama got made across continents</h3>
+          <p className='text-[22px] font-bold hover:underline'>Customer Stories</p>
+           <h3 className='text-[97px] font-familjen-grotesk w-[900px] font-bold hover:underline'>Remote and under control: How a K-Drama got made across continents</h3>
           </div>
             </div>
           </div>
