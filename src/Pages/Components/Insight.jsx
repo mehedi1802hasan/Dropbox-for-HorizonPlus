@@ -24,7 +24,7 @@ const Insight = () => {
                <span className="underline"> RSS</span>
             </p>
             <div className="text-center  mt-5 ">
-              <button className="hover:bg-[#090b0f]  border-2 text-[16px] font-semibold px-7  py-5 text-center flex justify-center items-center gap-7 ">
+              <button className="hover:bg-[#44474d]  border-2 text-[16px] font-semibold px-7  py-5 text-center flex justify-center items-center gap-7 ">
                 <p className="text-[16px]"> Latest eposodes</p>{" "}
                 <IoArrowForward />
               </button>
