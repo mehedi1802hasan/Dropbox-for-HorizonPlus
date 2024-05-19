@@ -16,7 +16,7 @@ const HomePage = () => {
             <HowUseDropbox></HowUseDropbox>
             <WhyChoiceUs></WhyChoiceUs>
            <HomePageStorySlider></HomePageStorySlider>
-            {/*  <GetStartDropbox></GetStartDropbox> */}
+             <GetStartDropbox></GetStartDropbox>
         </div>
     );
 };
