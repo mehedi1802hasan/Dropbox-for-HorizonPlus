@@ -9,7 +9,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 const Footer = () => {
     return (
       <div className='p-20 bg-[#000000]'>
-          <footer className="footer grid-cols-2 lg:grid-cols-6  text-neutral-content">
+          <footer className="footer grid-cols-2 lg:grid-cols-6  text-white">
         <nav>
           <h6 className=" text-xl font-bold text-white mb-1">Dropbox</h6> 
           <Link className="link link-hover">Desktop app</Link>

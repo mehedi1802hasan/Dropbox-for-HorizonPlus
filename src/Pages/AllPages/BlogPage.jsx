@@ -5,6 +5,8 @@ import BlogPageBanner from "../Components/BlogPageBanner";
 import Blog from "../Components/Blog";
 import Insight from "../Components/Insight";
 import CustomerStories from "../Components/CustomerStories";
+import WorkedCulture from "../Components/WorkedCulture";
+import News from "../Components/News";
 
 const BlogPage = () => {
   return (
@@ -14,6 +16,8 @@ const BlogPage = () => {
       <Blog></Blog>
       <Insight></Insight>
       <CustomerStories></CustomerStories>
+      <WorkedCulture></WorkedCulture>
+      <News></News>
       <BlogPageFooter></BlogPageFooter>
 
     </div>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import customStory1 from "../../assets/customStory1.png";
-import AugXhero from "../../assets/AugXhero.png";
-import customStory3 from "../../assets/customStory3.png";
+import Workslower from "../../assets/Workslower.png";
+import chrisDo from "../../assets/chrisDo.png";
+import aiSpottingm from "../../assets/aiSpottingm.gif";
 
-const CustomerStories = () => {
+const WorkedCulture = () => {
     const [isHovering, setIsHovering] = useState(false);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   
@@ -19,11 +19,11 @@ const CustomerStories = () => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
     };
   return (
-    <div className="text-black bg-[#FFCB95]  pb-32 ">
+    <div className="text-black bg-[#C8AFF0]  pb-32 ">
     <div className="pt-32 px-24">
-    <p className="text-[22px] font-bold text-[#0F503C]">Featured Topic</p>
+    <p className="text-[22px] font-bold text-[#61082B]">Featured Topic</p>
       <div className="flex items-center justify-between">
-        <p className="text-[60px] text-[#0F503C] font-familjen-grotesk font-bold">Customer Stories</p>
+        <p className="text-[60px] text-[#61082B] font-familjen-grotesk font-bold">Work Culture</p>
         <button className="text-[15px] border-2 font-bold  border-black px-7 py-2 ">View all </button>
       </div>
     </div>
@@ -35,7 +35,7 @@ const CustomerStories = () => {
         <div style={{ position: 'relative' }} onMouseMove={handleMouseMove}>
       <img
         className="w-[60vh] h-[60vh] hover:cursor-none"
-        src={customStory1}
+        src={Workslower}
         alt=""
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -56,16 +56,16 @@ const CustomerStories = () => {
         </div>
       )}
     </div>
-          <p className="text-[22px] hover:underline font-bold w-[300px] lg:leading-[27px] mt-4 mb-5">Remote and under control: How a K-Drama got made across continents</p>
-      <p className="text-[15px] font-medium flex items-center gap-3">By  <span className="underline hover:no-underline"> Tomi akitunde  </span> <li>May 14, 2024</li></p>
+          <p className="text-[22px] hover:underline font-bold w-[300px] lg:leading-[27px] mt-4 mb-5">Work slower, achieve more: A talk with Cal Newport</p>
+      <p className="text-[15px] font-medium flex items-center gap-3">By  <span className="underline hover:no-underline"> Jesse Will  </span> <li>April 26, 2024</li></p>
         </div>
                 {/* story-- 2 */}
 
         <div>
         <div style={{ position: 'relative' }} onMouseMove={handleMouseMove}>
       <img
-        className="w-[52vh] h-[32vh] hover:cursor-none"
-        src={AugXhero}
+        className="w-[59vh] h-[37vh] hover:cursor-none"
+        src={chrisDo}
         alt=""
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -84,8 +84,8 @@ const CustomerStories = () => {
           <span>Read</span>
         </div>
       )}
-    </div>          <p className="text-[22px] hover:underline font-bold w-[300px] lg:leading-[27px] mt-4 mb-5">How Aug X Labs made video creation less of a chore, more of a game</p>
-      <p className="text-[15px] font-medium flex items-center gap-3">By  <span className="underline hover:no-underline"> Drew Pearce  </span> <li>May 10, 2024</li></p>
+    </div>          <p className="text-[22px] hover:underline font-bold w-[300px] lg:leading-[27px] mt-4 mb-5">Chris Do on making your own multiverse by training a chatbot clone</p>
+      <p className="text-[15px] font-medium flex items-center gap-3">By  <span className="underline hover:no-underline"> Drew Pearce  </span> <li>April 19, 2024</li></p>
         </div>
 
         {/* story-- 3 */}
@@ -94,8 +94,8 @@ const CustomerStories = () => {
 
         <div style={{ position: 'relative' }} onMouseMove={handleMouseMove}>
     <img
-      className="w-[52vh] h-[32vh] hover: cursor-none"
-      src={customStory3}
+      className="w-[52vh] h-[52vh] hover: cursor-none"
+      src={aiSpottingm}
       alt=""
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -117,12 +117,14 @@ const CustomerStories = () => {
     )}
   </div>
 
-     <p className="text-[22px] hover:underline font-bold w-[300px] lg:leading-[27px] mt-4 mb-5">How one forensic psychologist keeps private investigations private</p>
-      <p className="text-[15px] font-medium flex items-center gap-3">By  <span className="underline hover:no-underline"> Drew Pearce  </span> <li>April 12, 2024</li></p>
+     <p className="text-[22px] hover:underline font-bold w-[300px] lg:leading-[27px] mt-4 mb-5">How AI is spotting manatees in the wild</p>
+      <p className="text-[15px] font-medium flex items-center gap-3">By  <span className="underline hover:no-underline"> Jesse Will  </span> <li>April 05, 2024
+
+</li></p>
         </div>
       </div>
     </div>
   );
 };
  
-export default CustomerStories;
+export default WorkedCulture;
