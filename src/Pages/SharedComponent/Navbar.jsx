@@ -17,11 +17,11 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full bg-[#FFFFFF] z-10 fixed border flex justify-center transition-all ${
-        isProductHovered ? "h-[470px]" : "h-[70px]"
-      } ${isSolutionHovered ? "h-[340px]" : "h-[70px]"}`}
+      className={`w-full bg-[#FFFFFF] duration-0 z-10 fixed border lg:flex justify-center transition-all ${
+        isProductHovered ? "h-[480px]" : "h-[70px]"
+      } ${isSolutionHovered ? "h-[350px]" : "h-[70px]"}`}
     >
-      <div className="navbar fixed w-[1300px] mx-auto  text-[14px] text-black">
+      <div className="navbar fixed md:w-[1300px] lg:w-[1300px] mx-auto  text-[14px] text-black">
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,9 +48,9 @@ const Navbar = () => {
               <Link to="/">Solution</Link>
               <Link to="/">Enterprise</Link>
               <Link to="/">Pricing</Link>
-              <Link to="/">Cantact sales</Link>
-              <Link to="/">Get app</Link>
-              <Link to="/">Sign up</Link>
+              <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/blog">Blog</Link>
               <Link to="/">Login</Link>
             </ul>
           </div>
@@ -89,9 +89,9 @@ const Navbar = () => {
             <Link to="/">
               <TbWorld className="text-xl text-[#1E1919]" />{" "}
             </Link>
-            <Link to="/">Cantact sales</Link>
-            <Link to="/">Get app</Link>
-            <Link to="/">Sign up</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/blog">Blog</Link>
             <Link to="/">Login</Link>
           </div>
           <Link className="bg-[#2f79f0] hover:bg-[#2064d3] text-white px-4 py-2 rounded-xl font-semibold">
@@ -198,7 +198,7 @@ const Navbar = () => {
           className="absolute  top-16 bg-[#FFFFFF] p-4 text-[16px] text-black 
        font-normal "
         >
-          <div className="grid grid-cols-3 gap-x-10 gap-y-6 mr-[230px]">
+          <div className="grid grid-cols-3 gap-x-10 gap-y-5 font-normal mr-[230px]">
             <p className="text-gray-500">Teams</p>
             <p className="text-gray-500">Use cases</p>
             <p className="text-gray-500">Industies</p>
