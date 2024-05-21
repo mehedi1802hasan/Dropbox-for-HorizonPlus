@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaDropbox } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
@@ -6,9 +6,28 @@ import { MdArrowOutward } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const BlogPageNavbar = () => {
+  const [isNavbarFixed, setIsNavbarFixed] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+
+      if (scrollTop > 0) {
+        setIsNavbarFixed(false);
+      } else {
+        setIsNavbarFixed(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className=" w-full   relative z-10  flex justify-center">
-      <div className="navbar flex justify-between items-center w-[1300px] mx-auto  ">
+    <div className={`w-full flex justify-center fixed z-10 ${isNavbarFixed ? '' : 'hidden'}`}>
+      <div className="navbar text-black flex justify-between items-center w-[1300px] mx-auto  ">
         <div className=" ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,9 +68,9 @@ const BlogPageNavbar = () => {
           </div>
           <div className=" flex items-center gap-4">
             <h3 className=" w-11 p-2 ">
-              <FaDropbox className=" w-full mx-auto text-3xl " />
+              <FaDropbox className=" w-full mx-auto text-3xl text-[#C8AFF0] " />
             </h3>
-            <Link to="/" className="text-[20px] font-bold">
+            <Link to="/" className="text-[20px] font-bold text-white">
               work in progress
             </Link>
           </div>
@@ -59,8 +78,9 @@ const BlogPageNavbar = () => {
 
         <div className="">
           <div className="mr-7 mt-1 gap-7 font-medium hidden lg:flex text-[16px]">
-            <Link >News </Link>
-            <Link >Work Culture</Link>
+            <Link to='/' >Home </Link>
+            <Link  to='/about' >About</Link>
+            <Link to='/contact' >Contact</Link>
             <Link className="flex items-center gap-2" >
               Made in Dropbox <MdKeyboardArrowDown />
             </Link>

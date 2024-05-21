@@ -7,6 +7,7 @@ import Insight from "../Components/Insight";
 import CustomerStories from "../Components/CustomerStories";
 import WorkedCulture from "../Components/WorkedCulture";
 import News from "../Components/News";
+import FeatureCollection from "../Components/FeatureCollection";
 
 const BlogPage = () => {
   return (
@@ -18,6 +19,7 @@ const BlogPage = () => {
           <Blog />
           <Insight />
           <CustomerStories />
+          <FeatureCollection></FeatureCollection>
           <WorkedCulture />
           <News />
           <BlogPageFooter />
