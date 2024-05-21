@@ -54,8 +54,12 @@ const BlogPageFooter = () => {
      <div>
      <footer className="footer grid-cols-2 lg:grid-cols-5  text-white">
         <p>Read our blogs</p>
-        <p className='lg:w-[720px]'>Please note: Sometimes we blog about upcoming products or features before they're released, but timing and exact functionality of these features may change from what's shared here. The decision to purchase our services should be made based on features that are currently available.</p>
+       <div>
+       <p className='lg:w-[720px]'>Please note: Sometimes we blog about upcoming products or features before they're released, but timing and exact functionality of these features may change from what's shared here. The decision to purchase our services should be made based on features that are currently available.</p>
+        <p>© Dropbox, Inc.</p>
+       </div>
         </footer>
+        
      </div>
       </div>
     );

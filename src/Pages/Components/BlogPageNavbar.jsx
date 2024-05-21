@@ -7,7 +7,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 const BlogPageNavbar = () => {
   return (
-    <div className=" w-full bg-base-100    flex justify-center">
+    <div className=" w-full   relative z-10  flex justify-center">
       <div className="navbar flex justify-between items-center w-[1300px] mx-auto  ">
         <div className=" ">
           <div className="dropdown">

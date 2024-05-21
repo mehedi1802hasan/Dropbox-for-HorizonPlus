@@ -11,15 +11,18 @@ import News from "../Components/News";
 const BlogPage = () => {
   return (
     <div className="">
-      <BlogPageNavbar></BlogPageNavbar>
-      <BlogPageBanner></BlogPageBanner>
-      <Blog></Blog>
-      <Insight></Insight>
-      <CustomerStories></CustomerStories>
-      <WorkedCulture></WorkedCulture>
-      <News></News>
-      <BlogPageFooter></BlogPageFooter>
-
+      <BlogPageNavbar />
+      <div className="">
+        <BlogPageBanner />
+        <div className="">
+          <Blog />
+          <Insight />
+          <CustomerStories />
+          <WorkedCulture />
+          <News />
+          <BlogPageFooter />
+        </div>
+      </div>
     </div>
   );
 };

@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         space_grotesk: ['Space Grotesk', 'sans-serif'],
         'familjen-grotesk': ['Familjen Grotesk', 'sans-serif'],
+        abc:['Yanone Kaffeesatz','sans-serif']
       },
     },
   },
