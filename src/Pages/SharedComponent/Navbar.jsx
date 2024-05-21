@@ -11,18 +11,19 @@ import Backup from "../../assets/Backup-logo-nav.svg";
 import sign from "../../assets/dropbox-sign-logo.svg";
 import Capture from "../../assets/Capture-logo-nav.svg";
 import arrowright from "../../assets/arrow_right.svg";
+
 const Navbar = () => {
   const [isProductHovered, setIsProductHovered] = useState(false);
   const [isSolutionHovered, setIsSolutionHovered] = useState(false);
 
   return (
     <div
-      className={`w-full bg-[#FFFFFF] duration-0 z-10 fixed border lg:flex justify-center transition-all ${
-        isProductHovered ? "h-[481px]" : "h-[70px]"
-      } ${isSolutionHovered ? "h-[350px]" : "h-[70px]"}`}
+      className={`w-full bg-[#FFFFFF] duration-300 z-10 fixed border lg:flex justify-center transition-all ${
+        isProductHovered ? "h-[481px]" : isSolutionHovered ? "h-[350px]" : "h-[70px]"
+      }`}
     >
-      <div className="navbar fixed md:w-[1300px] lg:w-[1300px] mx-auto  text-[14px] text-black">
-        <div className="navbar-start ">
+      <div className="navbar fixed md:w-[1300px] lg:w-[1300px] mx-auto text-[14px] text-black">
+        <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -49,8 +50,8 @@ const Navbar = () => {
               <Link to="/">Enterprise</Link>
               <Link to="/">Pricing</Link>
               <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/blog">Blog</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/blog">Blog</Link>
               <Link to="/">Login</Link>
             </ul>
           </div>
@@ -61,7 +62,7 @@ const Navbar = () => {
             <Link to="/" className="text-2xl font-bold">
               Dropbox{" "}
             </Link>
-          </div>{" "}
+          </div>
           <div className="ml-7 mt-1 gap-7 font-medium hidden lg:flex">
             <Link
               className="flex items-center gap-2"
@@ -87,7 +88,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <div className="mr-7 mt-1 gap-7 font-medium hidden lg:flex">
             <Link to="/">
-              <TbWorld className="text-xl text-[#1E1919]" />{" "}
+              <TbWorld className="text-xl text-[#1E1919]" />
             </Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
@@ -100,93 +101,93 @@ const Navbar = () => {
         </div>
       </div>
       {isProductHovered && (
-        <div className="absolute  top-16 bg-[#FFFFFF] p-4 text-sm text-gray-700">
+        <div className="absolute top-16 bg-[#FFFFFF] p-4 text-sm text-gray-700">
           <div className="grid grid-cols-2 gap-x-12 gap-y-6 mr-[550px]">
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={Dropbox} alt="" />
+                <img className="w-[32px] h-[32px]" src={Dropbox} alt="Dropbox" />
               </div>
               <div>
                 <p className="text-[17px] font-semibold">Dropbox</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={dashlogonav} alt="" />
+                <img className="w-[32px] h-[32px]" src={dashlogonav} alt="Dash (beta)" />
               </div>
               <div>
                 <p className="text-[17px] font-semibold">Dash (beta)</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={replay} alt="" />
+                <img className="w-[32px] h-[32px]" src={replay} alt="Replay" />
               </div>
               <div>
-                <p className="text-[17px] font-semibold">replay</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="text-[17px] font-semibold">Replay</p>
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={DocSend} alt="" />
+                <img className="w-[32px] h-[32px]" src={DocSend} alt="DocSend" />
               </div>
               <div>
                 <p className="text-[17px] font-semibold">DocSend</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={Backup} alt="" />
+                <img className="w-[32px] h-[32px]" src={Backup} alt="Backup" />
               </div>
               <div>
                 <p className="text-[17px] font-semibold">Backup</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={sign} alt="" />
+                <img className="w-[32px] h-[32px]" src={sign} alt="Sign" />
               </div>
               <div>
-                <p className="text-[17px] font-semibold">sign</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="text-[17px] font-semibold">Sign</p>
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={Capture} alt="" />
+                <img className="w-[32px] h-[32px]" src={Capture} alt="Capture" />
               </div>
               <div>
                 <p className="text-[17px] font-semibold">Capture</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
             <div className="flex gap-3">
               <div>
-                <img className="w-[32px] h-[32px]" src={arrowright} alt="" />
+                <img className="w-[32px] h-[32px]" src={arrowright} alt="Early Access" />
               </div>
               <div>
-                <p className="text-[17px] font-semibold">Early access</p>
-                <p className="w-[120px] text-[14px] mt-2 ">
-                  store,share,access file across device
+                <p className="text-[17px] font-semibold">Early Access</p>
+                <p className="w-[120px] text-[14px] mt-2">
+                  Store, share, access files across devices
                 </p>
               </div>
             </div>
@@ -194,26 +195,23 @@ const Navbar = () => {
         </div>
       )}
       {isSolutionHovered && (
-        <div
-          className="absolute  top-16 bg-[#FFFFFF] p-4 text-[16px] text-black 
-       font-normal "
-        >
+        <div className="absolute top-16 bg-[#FFFFFF] p-4 text-[16px] text-black font-normal">
           <div className="grid grid-cols-3 gap-x-10 gap-y-5 font-normal mr-[230px]">
             <p className="text-gray-500">Teams</p>
             <p className="text-gray-500">Use cases</p>
-            <p className="text-gray-500">Industies</p>
-            <p>sales</p>
-            <p>storage</p>
+            <p className="text-gray-500">Industries</p>
+            <p>Sales</p>
+            <p>Storage</p>
             <p>Construction</p>
             <p>Marketing</p>
             <p>Video Review</p>
             <p>Technology</p>
             <p>HR</p>
-            <p>Signing document </p>
-            <p>Manufuctaring</p>
+            <p>Signing Documents</p>
+            <p>Manufacturing</p>
             <p>IT</p>
-            <p>Sending File</p>
-            <p>Medis</p>
+            <p>Sending Files</p>
+            <p>Media</p>
           </div>
         </div>
       )}
