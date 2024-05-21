@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full bg-[#FFFFFF] duration-300 z-10 fixed border lg:flex justify-center transition-all ${
+      className={`w-full bg-[#FFFFFF] duration-0 z-10 fixed border lg:flex justify-center transition-all ${
         isProductHovered ? "h-[481px]" : isSolutionHovered ? "h-[350px]" : "h-[70px]"
       }`}
     >
