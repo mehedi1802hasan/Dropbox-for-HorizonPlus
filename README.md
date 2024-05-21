@@ -3,7 +3,7 @@
 CSS Framework: Tailwind CSS (with DaisyUI)
 JavaScript Library: ReactJS
 
-## This project live Link  [DropBox](https://dropbox-horizonplus-task.vercel.app/).
+## This project live Link  [vercel] https://dropbox-horizonplus-task.vercel.app/
 
 ### I have created 4 pages within one project. In the navbar, you'll find menus for About, Contact, and Blog. You can click on these menus to navigate to their respective routes.
 ### Code: src> Pages> AllPage* /Components/SharedComponent
