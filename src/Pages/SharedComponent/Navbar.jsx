@@ -45,27 +45,27 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <Link to="/">Products</Link>
-              <Link to="/">Solution</Link>
-              <Link to="/">Enterprise</Link>
-              <Link to="/">Pricing</Link>
-              <Link to="/about">About</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/">Login</Link>
+              <Link className="hover:text-[#0061FE]" to="/">Products</Link>
+              <Link className="hover:text-[#0061FE]" to="/">Solution</Link>
+              <Link className="hover:text-[#0061FE]" to="/">Enterprise</Link>
+              <Link className="hover:text-[#0061FE]" to="/">Pricing</Link>
+              <Link className="hover:text-[#0061FE]" to="/about">About</Link>
+              <Link className="hover:text-[#0061FE]" to="/contact">Contact</Link>
+              <Link className="hover:text-[#0061FE]" to="/blog">Blog</Link>
+              <Link className="hover:text-[#0061FE]" to="/">Login</Link>
             </ul>
           </div>
           <div className="flex items-center gap-2">
             <h3 className="bg-[#0061FE] w-11 p-2">
               <FaDropbox className="text-white w-full mx-auto text-2xl " />
             </h3>
-            <Link to="/" className="text-2xl font-bold">
+            <Link  to="/" className="text-2xl font-bold hover:text-[#0061FE]">
               Dropbox{" "}
             </Link>
           </div>
           <div className="ml-7 mt-1 gap-7 font-medium hidden lg:flex">
             <Link
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 hover:text-[#0061FE]"
               to="/"
               onMouseEnter={() => setIsProductHovered(true)}
               onMouseLeave={() => setIsProductHovered(false)}
@@ -73,27 +73,27 @@ const Navbar = () => {
               Products <RiArrowDownSLine className="text-xl" />
             </Link>
             <Link
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 hover:text-[#0061FE]"
               onMouseEnter={() => setIsSolutionHovered(true)}
               onMouseLeave={() => setIsSolutionHovered(false)}
               to="/"
             >
-              Solution <RiArrowDownSLine className="text-xl" />
+              Solution <RiArrowDownSLine className="text-xl " />
             </Link>
-            <Link to="/">Enterprise</Link>
-            <Link to="/">Pricing</Link>
+            <Link className="hover:text-[#0061FE]" to="/">Enterprise</Link>
+            <Link className="hover:text-[#0061FE]" to="/">Pricing</Link>
           </div>
         </div>
 
         <div className="navbar-end">
           <div className="mr-7 mt-1 gap-7 font-medium hidden lg:flex">
-            <Link to="/">
+            <Link className="hover:text-[#0061FE]" to="/">
               <TbWorld className="text-xl text-[#1E1919]" />
             </Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/">Login</Link>
+            <Link className="hover:text-[#0061FE]" to="/about">About</Link>
+            <Link className="hover:text-[#0061FE]" to="/contact">Contact</Link>
+            <Link className="hover:text-[#0061FE]" to="/blog">Blog</Link>
+            <Link className="hover:text-[#0061FE]" to="/">Login</Link>
           </div>
           <Link className="bg-[#2f79f0] hover:bg-[#2064d3] text-white px-4 py-2 rounded-xl font-semibold">
             Get started

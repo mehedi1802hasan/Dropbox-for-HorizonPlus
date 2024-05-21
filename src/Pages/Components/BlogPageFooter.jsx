@@ -52,7 +52,7 @@ const BlogPageFooter = () => {
     
       <div className=" w-[180px] divider divider-neutral"></div>
      <div>
-     <footer className="footer grid-cols-2 lg:grid-cols-5  text-white">
+     <footer className="footer grid grid-cols-1 md:grid-cols-5  lg:grid-cols-5  text-white">
         <p>Read our blogs</p>
        <div>
        <p className='lg:w-[720px]'>Please note: Sometimes we blog about upcoming products or features before they're released, but timing and exact functionality of these features may change from what's shared here. The decision to purchase our services should be made based on features that are currently available.</p>

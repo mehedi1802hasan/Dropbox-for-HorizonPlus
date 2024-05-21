@@ -13,9 +13,7 @@ const BlogPage = () => {
   return (
     <div className="">
       <BlogPageNavbar />
-      <div className="">
-        <BlogPageBanner />
-        <div className="">
+        <BlogPageBanner />    
           <Blog />
           <Insight />
           <CustomerStories />
@@ -23,8 +21,7 @@ const BlogPage = () => {
           <WorkedCulture />
           <News />
           <BlogPageFooter />
-        </div>
-      </div>
+      
     </div>
   );
 };

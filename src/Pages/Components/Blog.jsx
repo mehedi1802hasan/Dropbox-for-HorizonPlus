@@ -27,26 +27,26 @@ const Blog = () => {
     setCursorPosition({ x: e.clientX, y: e.clientY });
   };
   return (
-    <div className="text-black lg:pb-52 lg:pt-32  ">
+    <div className="text-black lg:pb-52 pt-16 md:pt-52 lg:pt-32  ">
       <div className="">
         <div
           onClick={() => handleAddBlog()}
-          className=" animate-bounce flex mb-12 justify-end  w-[1100px]  mx-auto "
+          className=" animate-bounce flex mb-12 justify-end w-[300px] md:w-[1100px]  lg:w-[1100px]  mx-auto "
         >
-          <button className="  border-2 px-8 py-3 border-black rounded-sm hover:border-red-400  hover:bg-yellow-400 font-bold hover:text-white  ">
+          <button className=" border-red-600  border-2 px-8 py-3  rounded-sm hover:border-red-400  hover:bg-green-600 font-bold hover:text-white  ">
             Add Blog
           </button>
         </div>
 
         {/* Daynamic blogs */}
-        <div className="blog-list grid grid-cols-2 mb-24 gap-y-20 w-[1070px] mx-auto">
+        <div className="blog-list grid grid-cols-2  mb-24 gap-y-1 md:gap-y-20 lg:gap-y-20 w-[300px] md:w-[1070px] lg:w-[1070px] mx-auto">
           {blogs.length > 0 ? (
             blogs.map((blog, index) => (
               <div key={index} className="blog-item  p-4 mb-4 rounded">
               <div style={{ position: 'relative' }} onMouseMove={handleMouseMove}>  <img
                   src={blog.image}
                   alt={blog.name}
-                  className="w-[337px] h-[211px] mt-2 hover:cursor-none"  onMouseEnter={handleMouseEnter}
+                  className="lg:w-[337px] lg:h-[211px] mt-2 hover:cursor-none"  onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />    {isHovering && (
                   <div
@@ -60,10 +60,10 @@ const Blog = () => {
                       boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.3)',
                     }}
                   >
-                    <span className="bg-black text-white text-4xl">Read</span>
+                    <span className="bg-black text-white  text-xl  md:text-4xl lg:text-4xl">Read</span>
                   </div>
                 )} </div>
-                <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[400px] text-black">
+                <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[200px] md:w-[400px] lg:w-[400px] text-black">
                   {blog.title}
                 </p>
                 <p className="text-[15px] hover:underline">{blog.type}</p>
@@ -79,7 +79,7 @@ const Blog = () => {
           <div className="mt-6">
             <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
               <img
-                className="w-[464px] h-[464px] hover:cursor-none"
+                className=" w-[204px] md:w-[464px] lg:w-[464px]  mx-auto lg:mx-0   h-[164px] md:h-[464px] lg:h-[464px] hover:cursor-none"
                 src={abdiaidid}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -97,20 +97,20 @@ const Blog = () => {
                     boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)",
                   }}
                 >
-                  <span className="bg-black text-white text-4xl">Read</span>
+                  <span className="bg-black text-white text-xl md:text-4xl lg:text-4xl">Read</span>
                 </div>
               )}
             </div>
-            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[400px] text-black">
+            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[290px] md:w-[400px] lg:w-[400px] mx-auto lg:mx-0 text-black">
               Abdi Aidid on being your most creative, dynamic self
             </p>
-            <p className="text-[15px] hover:underline">Podcast</p>
+            <p className="text-[15px] hover:underline text-center lg:text-start md:text-start">Podcast</p>
           </div>
           {/* 2nd static blog */}
-          <div>
+          <div className="my-10 md:mt-0 lg:mt-0">
             <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
               <img
-                className="w-[506px] h-[510px] hover:cursor-none"
+                className=" w-[204px] md:w-[506px] lg:w-[506px]  mx-auto lg:mx-0   h-[164px] md:h-[510px] lg:h-[510px] hover:cursor-none "
                 src={Workslower}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -132,19 +132,19 @@ const Blog = () => {
                 </div>
               )}{" "}
             </div>
-            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[400px] text-black">
+            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[290px] md:w-[400px] lg:w-[400px] mx-auto lg:mx-0 text-black">
               Abdi Aidid on being your most creative, dynamic self
             </p>
-            <p className="text-[15px] hover:underline">Podcast</p>
+            <p className="text-[15px] hover:underline text-center lg:text-start md:text-start">Podcast</p>
           </div>
         </div>
-        <div className="mt-28 w-[1170px] mx-auto lg:flex  justify-between  gap-8">
+        <div className="mt-28 w-[300px] md:w-[1170px] lg:w-[1170px] mx-auto lg:flex  justify-between  gap-8">
           {/* 3rd static blog */}
           <div className="mt-6">
             <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
            
               <img
-                className="w-[337px] h-[211px] hover:cursor-none"
+                className="w-[204px] md:w-[337px] lg:w-[337px]  mx-auto lg:mx-0   h-[164px] md:h-[211px] lg:h-[211px] hover:cursor-none"
                 src={AugXhero}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -166,18 +166,18 @@ const Blog = () => {
                 </div>
               )}{" "}
             </div>
-            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[270px]   lg:leading-[25px] text-black">
+            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[290px] md:w-[270px] lg:w-[270px] mx-auto lg:mx-0    lg:leading-[25px] text-black">
               How Aug X Labs made video creation less of a chore, more of a game
             </p>
-            <p className="text-[15px] hover:underline">Customer Stories</p>
+            <p className="text-[15px] hover:underline text-center lg:text-start md:text-start">Customer Stories</p>
           </div>
           {/*4th static blog */}
 
-          <div className="">
+          <div className="my-10 md:mt-0 lg:mt-0">
             <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
               
               <img
-                className="w-[337px] h-[337px] hover:cursor-none"
+                className="w-[204px] md:w-[337px] lg:w-[337px]  mx-auto lg:mx-0   h-[164px] md:h-[337px] lg:h-[337px] hover:cursor-none"
                 src={robo}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -199,10 +199,10 @@ const Blog = () => {
                 </div>
               )}{" "}
             </div>
-            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[300px] text-black">
+            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[290px] md:w-[300px] lg:w-[300px] mx-auto lg:mx-0 text-black">
               Will robots give us more "me" time?
             </p>
-            <p className="text-[15px] hover:underline">Work Culture</p>
+            <p className="text-[15px] hover:underline text-center lg:text-start md:text-start">Work Culture</p>
           </div>
 
           {/*5th static blog */}
@@ -210,7 +210,7 @@ const Blog = () => {
             <div style={{ position: "relative" }} onMouseMove={handleMouseMove}>
            
               <img
-                className="w-[337px] h-[337px] hover:cursor-none"
+                className="w-[204px] md:w-[337px] lg:w-[337px]  mx-auto lg:mx-0   h-[164px] md:h-[337px] lg:h-[337px]  hover:cursor-none"
                 src={aiSpottingm}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -232,10 +232,10 @@ const Blog = () => {
                 </div>
               )}{" "}
             </div>
-            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[240px] text-black">
+            <p className="mt-6 mb-4 hover:underline text-[22px] font-bold w-[290px] md:w-[240px] lg:w-[240px] mx-auto lg:mx-0 text-black">
               How AI is spotting manatees in the wild
             </p>
-            <p className="text-[15px] hover:underline">Work Culture</p>
+            <p className="text-[15px] hover:underline text-center lg:text-start md:text-start">Work Culture</p>
           </div>
         </div>
       </div>

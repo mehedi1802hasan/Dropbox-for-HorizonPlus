@@ -50,16 +50,17 @@ const BlogPageNavbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <Link to="/">News </Link>
-              <Link to="/">Work Culture</Link>
-              <Link className="flex items-center gap-2" to="/">
-                Made in Dropbox <MdKeyboardArrowDown />
+                <Link to='/' >Home </Link>
+            <Link  to='/about' >About</Link>
+            <Link to='/contact' >Contact</Link>
+              <Link  to="">
+                Made in Dropbox 
               </Link>
-              <Link className="flex items-center gap-2" to="/">
-                Collections <MdKeyboardArrowDown />
+              <Link  to="">
+                Collections 
               </Link>
-              <Link className="flex items-center gap-2" to="/">
-                Tech blog <MdArrowOutward />
+              <Link >
+                Tech blog 
               </Link>
               <Link to="/">
                 <CiSearch />
